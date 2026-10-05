@@ -1,6 +1,7 @@
+import React from 'react'
+
 import { cxx, type WrapperClasses } from '@jk2908/cxx'
 import { clsx } from 'clsx'
-import React from 'react'
 
 export function Wrapper({
 	className,

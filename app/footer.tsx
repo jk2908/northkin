@@ -1,8 +1,10 @@
-import { cxx, type FooterClasses } from '@jk2908/cxx'
-import { clsx } from 'clsx'
+import React from 'react'
+
 import Image from 'next/image'
 import { connection } from 'next/server'
-import React from 'react'
+
+import { cxx, type FooterClasses } from '@jk2908/cxx'
+import { clsx } from 'clsx'
 
 import { NAME } from '#/lib/config'
 

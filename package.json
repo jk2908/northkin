@@ -1,51 +1,51 @@
 {
-  "name": "northkin",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "dev:vinext": "vite dev --port 3001",
-    "build:vinext": "vite build",
-    "start:vinext": "vite preview",
-    "deploy:vinext": "vite build && cf deploy --prebuilt --mode production --secrets-file .dev.vars"
-  },
-  "dependencies": {
-    "@eusend_dev/sdk": "^0.18.0",
-    "@jk2908/cxx": "0.3.6",
-    "@vinext/cloudflare": "^1.0.1",
-    "clsx": "^2.1.1",
-    "next": "16.3.6",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
-    "react-server-dom-webpack": "^19.3.0",
-    "valibot": "^1.5.0",
-    "vinext": "^1.0.1"
-  },
-  "devDependencies": {
-    "@cloudflare/vite-plugin": "^2.0.0-beta.sha-52b0dc0e9",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@vitejs/plugin-react": "^6.1.1",
-    "@vitejs/plugin-rsc": "^0.5.35",
-    "babel-plugin-react-compiler": "1.0.0",
-    "cf": "^1.0.0-beta.12",
-    "oxc-transform-react": "^0.152.0",
-    "oxfmt": "^0.71.0",
-    "oxlint": "^1.86.0",
-    "typescript": "^5",
-    "vite": "8.3.0"
-  },
-  "packageManager": "bun@1.4.0",
-  "ignoreScripts": [
-    "sharp",
-    "unrs-resolver"
-  ],
-  "trustedDependencies": [
-    "sharp",
-    "unrs-resolver"
-  ],
-  "type": "module"
+	"name": "northkin",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"dev:vinext": "vite dev --port 3001",
+		"build:vinext": "vite build",
+		"start:vinext": "vite preview",
+		"deploy:vinext": "vite build && cf deploy --prebuilt --mode production --secrets-file .dev.vars"
+	},
+	"dependencies": {
+		"@eusend_dev/sdk": "^0.18.0",
+		"@jk2908/cxx": "0.3.6",
+		"@vinext/cloudflare": "^1.0.1",
+		"clsx": "^2.1.1",
+		"next": "16.3.6",
+		"react": "19.2.8",
+		"react-dom": "19.2.8",
+		"react-server-dom-webpack": "^19.3.0",
+		"valibot": "^1.5.0",
+		"vinext": "^1.0.1"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "^2.0.0-beta.sha-52b0dc0e9",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"@vitejs/plugin-react": "^6.1.1",
+		"@vitejs/plugin-rsc": "^0.5.35",
+		"babel-plugin-react-compiler": "1.0.0",
+		"cf": "^1.0.0-beta.12",
+		"oxc-transform-react": "^0.152.0",
+		"oxfmt": "^0.71.0",
+		"oxlint": "^1.86.0",
+		"typescript": "^5",
+		"vite": "8.3.0"
+	},
+	"packageManager": "bun@1.4.0",
+	"ignoreScripts": [
+		"sharp",
+		"unrs-resolver"
+	],
+	"trustedDependencies": [
+		"sharp",
+		"unrs-resolver"
+	]
 }

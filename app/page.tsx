@@ -1,5 +1,6 @@
-import { cxx, type HomeClasses } from '@jk2908/cxx'
 import { Suspense } from 'react'
+
+import { cxx, type HomeClasses } from '@jk2908/cxx'
 
 import { ContactForm } from '#/app/contact-form'
 import { Footer } from '#/app/footer'

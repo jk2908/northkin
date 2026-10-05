@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from 'next'
-
 import localFont from 'next/font/local'
 
 import { DESCRIPTION, NAME } from '#/lib/config'
+
 import './styles.css'
 
 const westernic = localFont({

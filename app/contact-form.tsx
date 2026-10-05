@@ -1,7 +1,8 @@
 'use client'
 
-import { cxx, type ContactFormClasses } from '@jk2908/cxx'
 import { useActionState, useState } from 'react'
+
+import { cxx, type ContactFormClasses } from '@jk2908/cxx'
 
 import { send, type ContactState } from '#/app/actions'
 import { Button } from '#/app/button'
