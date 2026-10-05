@@ -93,6 +93,7 @@ const [css, styles, href] = cxx.tag<ContactFormClasses>('ContactForm')`
   }
 
   .input, .textarea {
+    background-color: rgb(255 255 255 / 75%);
     border: 1px solid rgb(var(--blue-800));  
     border-radius: var(--radius-md);
     padding-block: var(--space-4x);
@@ -109,7 +110,6 @@ const [css, styles, href] = cxx.tag<ContactFormClasses>('ContactForm')`
   }
 
   .input {
-    background-color: transparent;
     color: inherit;
     font: inherit;
     line-height: 1.5;
