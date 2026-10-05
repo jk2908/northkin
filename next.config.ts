@@ -1,8 +1,10 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
+
+import { withCxx } from '@jk2908/cxx/next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
-};
+	reactCompiler: true,
+	cacheComponents: true,
+}
 
-export default nextConfig;
+export default withCxx(nextConfig)

@@ -1,0 +1,42 @@
+{
+	"useTabs": true,
+	"tabWidth": 2,
+	"printWidth": 90,
+	"singleQuote": true,
+	"jsxSingleQuote": false,
+	"quoteProps": "as-needed",
+	"trailingComma": "all",
+	"semi": false,
+	"arrowParens": "avoid",
+	"bracketSameLine": true,
+	"bracketSpacing": true,
+	"singleAttributePerLine": false,
+	"sortImports": {
+		"newlinesBetween": true,
+		"internalPattern": ["#/"],
+		"customGroups": [
+			{
+				"groupName": "react",
+				"elementNamePattern": ["react", "react/**", "react-dom", "react-dom/**"]
+			},
+			{
+				"groupName": "next",
+				"elementNamePattern": ["next", "next/**"]
+			},
+			{
+				"groupName": "types",
+				"selector": "type"
+			}
+		],
+		"groups": [
+			"react",
+			"next",
+			"types",
+			["builtin", "external"],
+			["internal", "parent", "sibling", "index"],
+			["side_effect", "style"],
+			"unknown"
+		]
+	},
+	"ignorePatterns": ["**/dist/**", "**/node_modules/**", "**/.cxx/**"]
+}
