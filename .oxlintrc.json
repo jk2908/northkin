@@ -31,5 +31,11 @@
 		"react/use-memo": "error",
 		"react/void-use-memo": "error"
 	},
-	"ignorePatterns": ["**/dist/**", "**/node_modules/**", "**/.cxx/**"]
+	"ignorePatterns": [
+		"**/dist/**",
+		"**/node_modules/**",
+		"**/.cxx/**",
+		"**/.solas/**",
+		"**/build/**"
+	]
 }

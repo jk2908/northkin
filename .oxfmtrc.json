@@ -20,8 +20,8 @@
 				"elementNamePattern": ["react", "react/**", "react-dom", "react-dom/**"]
 			},
 			{
-				"groupName": "next",
-				"elementNamePattern": ["next", "next/**"]
+				"groupName": "solas",
+				"elementNamePattern": ["@jk2908/solas", "@jk2908/solas/**"]
 			},
 			{
 				"groupName": "types",
@@ -30,7 +30,7 @@
 		],
 		"groups": [
 			"react",
-			"next",
+			"solas",
 			"types",
 			["builtin", "external"],
 			["internal", "parent", "sibling", "index"],
@@ -38,5 +38,11 @@
 			"unknown"
 		]
 	},
-	"ignorePatterns": ["**/dist/**", "**/node_modules/**", "**/.cxx/**"]
+	"ignorePatterns": [
+		"**/dist/**",
+		"**/node_modules/**",
+		"**/.cxx/**",
+		"**/.solas/**",
+		"**/build/**"
+	]
 }

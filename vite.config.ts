@@ -1,23 +1,22 @@
-import { cloudflare } from '@cloudflare/vite-plugin'
+import solas from '@jk2908/solas'
+import cloudflare from '@jk2908/solas/adapters/cloudflare'
+
 import cxx from '@jk2908/cxx/vite'
-import { kvDataAdapter } from '@vinext/cloudflare/cache/kv-data-adapter'
-import { imagesOptimizer } from '@vinext/cloudflare/images/images-optimizer'
-import vinext from 'vinext'
+import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
 	plugins: [
-		vinext({
-			react: { compiler: true },
-			cache: { data: kvDataAdapter() },
-			images: { optimizer: imagesOptimizer() },
+		solas({
+			url: process.env.SITE_URL,
+			prerender: 'ppr',
+			adapter: cloudflare(),
+			sitemap: true,
 		}),
-		cloudflare({
-			viteEnvironment: {
-				name: 'rsc',
-				childEnvironments: ['ssr'],
-			},
-		}),
+		react({ compiler: true }),
 		cxx(),
 	],
+	resolve: {
+		tsconfigPaths: true,
+	},
 })

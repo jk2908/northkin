@@ -1,6 +1,7 @@
 'use server'
 
 import { Eusend } from '@eusend_dev/sdk'
+import { env } from 'cloudflare:workers'
 import * as v from 'valibot'
 
 import { ContactSchema } from '#/app/schemas'
@@ -27,7 +28,7 @@ export async function send(
 		}
 	}
 
-	const apiKey = process.env.EUSEND_API_KEY
+	const apiKey = env.EUSEND_API_KEY
 
 	if (!apiKey) {
 		return { status: 'error', message: 'Email is not configured yet.' }

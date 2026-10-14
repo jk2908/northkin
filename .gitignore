@@ -45,5 +45,5 @@ next-env.d.ts
 # cxx
 .cxx
 /dist/
-.vinext/
+.solas
 .cloudflare/

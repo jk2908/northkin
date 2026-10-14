@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Image from 'next/image'
-import { connection } from 'next/server'
+import { dynamic } from '@jk2908/solas/server'
 
 import { cxx, type FooterClasses } from '@jk2908/cxx'
 import { clsx } from 'clsx'
@@ -12,7 +11,7 @@ export async function Footer({
 	className,
 	...rest
 }: React.ComponentPropsWithRef<'footer'>) {
-	await connection()
+	await dynamic()
 
 	// oxlint-disable-next-line react/purity
 	const year = new Date().getFullYear()
@@ -24,7 +23,7 @@ export async function Footer({
 					Copyright {year} {NAME}
 				</span>
 
-				<Image src="/icon-dark.svg" width={29} height={20} alt="" className={styles.nk} />
+				<img src="/icon-dark.svg" width={29} height={20} alt="" className={styles.nk} />
 			</footer>
 
 			<style precedence="default" href={href}>
