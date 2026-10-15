@@ -1,5 +1,3 @@
-import { Suspense } from 'react'
-
 import { cxx, type HomeClasses } from '@jk2908/cxx'
 
 import { ContactForm } from '#/app/contact-form'
@@ -38,9 +36,7 @@ export default function Home() {
 					<ContactForm />
 				</section>
 
-				<Suspense fallback={null}>
-					<Footer />
-				</Suspense>
+				<Footer />
 			</Wrapper>
 
 			<style precedence="default" href={href}>

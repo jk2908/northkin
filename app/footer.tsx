@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 
 import { dynamic } from '@jk2908/solas/server'
 
@@ -7,21 +7,13 @@ import { clsx } from 'clsx'
 
 import { NAME } from '#/lib/config'
 
-export async function Footer({
-	className,
-	...rest
-}: React.ComponentPropsWithRef<'footer'>) {
-	await dynamic()
-
-	// oxlint-disable-next-line react/purity
-	const year = new Date().getFullYear()
-
+export function Footer({ className, ...rest }: React.ComponentPropsWithRef<'footer'>) {
 	return (
 		<>
 			<footer className={clsx(styles.footer, className)} {...rest}>
-				<span>
-					Copyright {year} {NAME}
-				</span>
+				<Suspense fallback={<span>...</span>}>
+					<Copyright />
+				</Suspense>
 
 				<img src="/icon-dark.svg" width={29} height={20} alt="" className={styles.nk} />
 			</footer>
@@ -30,6 +22,19 @@ export async function Footer({
 				{css}
 			</style>
 		</>
+	)
+}
+
+export async function Copyright() {
+	await dynamic()
+
+	// oxlint-disable-next-line react/purity
+	const year = new Date().getFullYear()
+
+	return (
+		<span>
+			Copyright {year} {NAME}
+		</span>
 	)
 }
 
